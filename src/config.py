@@ -35,13 +35,13 @@ class Config(object):
             'capsule': CapsuleModel,
             'simplecnn': SimpleCNNModel,
         }
-        self.n_class = 19
+        self.n_class = 2
         # 9-5
         # self.WORD_MAXLEN = 1000
         self.CHAR_MAXLEN = 2000
         self.WORD_MAXLEN = self.CHAR_MAXLEN
 
-        self.EMBED_SIZE = 100
+        self.EMBED_SIZE = 300
         self.BATCH_SIZE = 128
         self.main_feature = 'word'
         self.wd = 1e-6
@@ -53,6 +53,8 @@ class Config(object):
         self.word_seg_w2v_file = '../data/word2vec-models/word2vec.word.{}d.mfreq3.model'.format(self.EMBED_SIZE)
         self.chi_word_file = '../data/chi_words_40000.pkl'
         self.chi_char_file = '../data/chi_char_3000.pkl'
+        self.fasttext_file = '/home/ec2-user/SageMaker/word2vector/fasttext_300d.pkl'
+        self.word2vec_file = '/home/ec2-user/SageMaker/word2vector/jawiki_20180420_300d.txt'
 
         # self.TRAIN_X = '../data/Clean.train.csv'
         self.TRAIN_X = '../data/New.train.csv'
